@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>Template voor javascript oefeningen</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    </head>
+    <body>
+
+
+
+    <div class="footer">
+        &copy; 2023 Ryan Douglas
+    </div>
+
+        <script>
+           
+
+//type hier je javascript en gebruik de debugger om de console te bekijken
+
+// Definieer JavaScript-objecten voor elke vraag in de quiz
+
+var vraag1 = {
+
+vraagtekst: "waarom staat een flamingo op 1 been?",
+
+mogelijkeAntwoorden: ["A. om niet af te koelen", "B. tegen vliegjes", "C. om een been te sparen"],
+
+juisteAntwoord: "A"
+
+};
+
+
+
+
+var vraag2 = {
+
+vraagtekst: "hoeveel kcal zit er in een cheeseburger van de macdonalds?",
+
+mogelijkeAntwoorden: ["A. 121", "B. 297", "C. 311"],
+
+juisteAntwoord: "B"
+
+};
+
+
+
+
+var vraag3 = {
+
+vraagtekst: "welke kleuren heeft de oekrainse vlag?",
+
+mogelijkeAntwoorden: ["A. rood en geel", "B. blauw en geel", "C. zwart en blauw"],
+
+juisteAntwoord: "B"
+
+};
+
+
+
+
+var vraag4 = {
+
+vraagtekst: "welke kleur heeft een ijsbeer onder de haren?",
+
+mogelijkeAntwoorden: ["A. wit", "B. rood/roze", "C. zwart "],
+
+juisteAntwoord: "C"
+
+};
+
+
+
+
+var vraag5 = {
+
+vraagtekst: "hoe noemen we iets wat we al eerder hebben meegemaakt?",
+
+mogelijkeAntwoorden: ["A. deja vu", "B. crembrulee", "C. jade uv"],
+
+juisteAntwoord: "A"
+
+};
+
+var vraag6 = {
+
+vraagtekst: "waar komen oorspronkelijk de bolletjes schep ijs vandaan?",
+
+mogelijkeAntwoorden: ["A. spanje", "B. Italie", "C. china"],
+
+juisteAntwoord: "C"
+
+};
+
+
+
+
+
+
+
+// Maak een array om de vraag-objecten op te slaan
+
+var vraagArray = [vraag1, vraag2, vraag3, vraag4,vraag5, vraag6];
+
+
+
+
+// Schrijf de functie "weergeefVragen" om de vragen aan de gebruiker weer te geven
+
+function weergeefVragen() {
+
+var score = 0; // Houd de score bij
+
+var totaalVragen = vraagArray.length;
+
+
+
+
+for (var i = 0; i < totaalVragen; i++) {
+
+var vraag = vraagArray[i];
+
+var antwoord = prompt(vraag.vraagtekst + "\n" + vraag.mogelijkeAntwoorden.join("\n"));
+
+
+
+
+if (antwoord === vraag.juisteAntwoord) {
+
+score++; // Verhoog de score als het antwoord juist is
+
+}
+
+}
+
+
+
+
+geefFeedback(score, totaalVragen); // Geef feedback aan de gebruiker
+
+}
+
+
+
+
+// Schrijf de functie "geefFeedback" om feedback aan de gebruiker te geven
+
+function geefFeedback(score, totaalVragen) {
+
+var percentageCorrect = (score / totaalVragen) * 100;
+
+var bericht = "Je hebt " + score + " van de " + totaalVragen + " vragen correct beantwoord.\n";
+
+bericht += "Je score: " + percentageCorrect + "%";
+
+alert(bericht);
+
+}
+
+
+
+
+// Voer de functie "weergeefVragen" uit om de quiz te starten
+
+weergeefVragen();
+
+
+
+
+
+
+
+</script>
+
+    </body>
+</html>

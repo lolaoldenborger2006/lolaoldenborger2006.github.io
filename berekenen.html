@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mijn eerste opdracht</title>
+	<style>
+		body {
+			background-color: lightblue;
+			color: darkblue;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			color: darkred;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Mijn eerste opdracht</h1>
+	<p id="resultaat"></p>
+	
+	<script>
+		// Hier komt je JavaScript code
+			let getal1 = prompt ("voer het eerste getal in");
+			let getal2 = prompt ("voer het tweede getal in");
+
+let som = parseInt(getal1) + parseInt(getal2);
+let verschil = getal1 - getal2;
+let product = getal1 * getal2;
+let quotiënt = getal1 / getal2;
+
+
+document.write("De som van " + getal1 + " en " + getal2 + " is " + som + "<br>");
+document.write("Het verschil tussen " + getal1 + " en " + getal2 + " is " + verschil + "<br>");
+document.write("Het product van " + getal1 + " en " + getal2 + " is " + product + "<br>");
+document.write("Het delen van " + getal1 + " en " + getal2 + " is " + quotiënt + "<br>");
+
+	</script>
+</body>
+</html>
